@@ -1,0 +1,110 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="/portal_gamer_2/imgs/logo.ico">
+  <title>Gamer station </title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/carousel.css" rel="stylesheet">
+  <link href="css/loader.css" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
+  </script>
+  <!-- <script src="js/banner.js"></script> -->
+  <script src="js/search.js"></script>
+  <script src="js/platforms.js"></script>
+
+  
+</head>
+
+<body>
+  <div class="loader-wrapper">
+    <span class="loader"><span class="loader-inner"></span></span>
+  </div>
+  <script>
+    $(window).on("load", function () {
+      $(".loader-wrapper").fadeOut("slow" | 4000)
+    });
+  </script>
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <img alt="logo" src="imgs/logo.png" height="40" class="">
+        <a class="navbar-brand" href="#">Gamer station</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href='index.html#destaques'>Destaques</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="games.html">Games</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="platforms.html">Plataformas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#lojas">Lojas</a>
+            </li>
+          </ul>
+          <form class="d-flex role" type="get" action="games.html">
+            <input class="form-control me-2" name="search" type="search" id="search" placeholder="Digite o nome do jogo desejado" aria-label="Search">
+            <button class="btn btn-outline-info" type="submit" id="btn_search">Buscar</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+
+    <div class="px-4 py-5" id="custom-cards">
+      <h1 class="pb-2 border-bottom text-center">Plataformas</h1>  
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 align-items-stretch g-4 py-5">
+      </div>
+      <nav aria-label="pagination">
+        <ul class="pagination">
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="platformModal" tabindex="-1" aria-labelledby="platformModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="modalTitle"></h1>
+            
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button id= "site" type="button" class="btn btn-primary">Acessar site</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="featurette-divider">
+    <!-- FOOTER -->
+    <footer class="container">
+      <p class="float-end"><a href="#">Back to top</a></p>
+      <p>© 2017–2022 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+    </footer>
+  </main>
+</body>
+
+<style>
+  .pagination{
+    justify-content: center;
+    align-items: center;
+  }
+</style>
+
+</html>
