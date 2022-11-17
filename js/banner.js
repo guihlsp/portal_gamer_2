@@ -12,13 +12,14 @@ var initCarousel = function (page_size, idCarousel) {
                     if (i != 0) active = '';
                     sliders += `
             <div class="carousel-item ${active}">
-                <img class="bd-placeholder-img" width="100%" height="100%" src="${result.background_image}"/>
+                <img class="bd-placeholder-img" width="100%" height="100%" src="${result.background_image}" style="background-size: cover"/>
 
                 <div class="container">
                 <div class="carousel-caption">
-                    <h1>${result.name}</h1>
+                    <h1 class="sombra-titulo">${result.name}</h1>
                     <p>Descrição do jogo</p>
-                    <p><a class="btn btn-lg btn-primary" href="#">Saiba mais</a></p>
+                    <p>Avaliação: ${result.rating}/${result.rating_top}</p>
+                    <p><a class="btn btn-lg btn-primary">Saiba mais</a></p>
                 </div>
                 </div>
             </div>`
