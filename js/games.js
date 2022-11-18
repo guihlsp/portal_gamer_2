@@ -59,7 +59,7 @@ var initGamesList = function (search, page=1, page_size=24) {
             response.results.forEach(result => {
                 cards += `
         <div class="col preview-game" data-target="${result.id}" style="cursor: pointer;height: 290px;">
-          <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('${result.background_image}'); background-size: cover">
+          <div class="card card-cover h-100 overflow-hidden text-bg-dark shadow-lg" style="background-image: url('${result.background_image}'); background-size: cover">
             <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1 text-center">
               <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold" style="text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;">${result.name}</h3>
                 </li>
