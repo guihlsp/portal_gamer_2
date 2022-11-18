@@ -18,7 +18,6 @@ var initCarousel = function (page_size, idCarousel) {
                     <h1 class="sombra-titulo">${result.name}</h1>
                     <p class="sombra-titulo">Descrição do jogo</p>
                     <p class="sombra-titulo">Avaliação: ${result.rating}/${result.rating_top}</p>
-                    <p><a class="btn btn-lg btn-primary">Saiba mais</a></p>
                 </div>
                 </div>
             </div>`
@@ -32,6 +31,7 @@ var initCarousel = function (page_size, idCarousel) {
         );
     }
 }
+{/* <p><a class="btn btn-lg btn-primary">Saiba mais</a></p> */}
 
 $(document).ready(function () {
     const page_size = 6;
