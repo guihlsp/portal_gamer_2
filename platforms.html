@@ -21,6 +21,8 @@
 </head>
 
 <body>
+  <input type="hidden" id="page" value="">
+
   <div class="loader-wrapper">
     <span class="loader"><span class="loader-inner"></span></span>
   </div>
@@ -66,7 +68,8 @@
 
     <div class="px-4 py-5" id="custom-cards">
       <h1 class="pb-2 border-bottom text-center">Plataformas</h1>
-      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 align-items-stretch g-4 py-5">
+      <div id="platforms-items" style="display:flex;justify-content: center;" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 align-items-stretch g-4 py-5">
+        <img src="imgs/loading.gif" style="width: 300px;"/>
       </div>
       <nav aria-label="pagination">
         <ul class="pagination">

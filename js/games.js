@@ -11,7 +11,6 @@ var createButton  = (page, distance) => {
             <a class="page-link page-${parseInt(page)+distance}" href="games.html?${btn}">${parseInt(page)+distance}</a>
         </li>
     `
-    
     return button
 }
 var initGamesList = function (search, page=1, page_size=24) {
@@ -27,7 +26,7 @@ var initGamesList = function (search, page=1, page_size=24) {
     }
     
     var cards = '';
-    $(".loader-wrapper")
+    // $(".loader-wrapper")
     $.get(
         url,
         function (response) {
@@ -53,6 +52,7 @@ var initGamesList = function (search, page=1, page_size=24) {
             if(pages > page){
                 paginator += `<li class="page-item"><a class="page-link" href="games.html?${btnNext}">Próxima</a></li>`;
             }
+            $("#games-items").removeAttr("style")
             $('.pagination').html(paginator)
             let currentPage = $("#page").val()
             $(".page-"+currentPage).addClass("active");
@@ -69,7 +69,7 @@ var initGamesList = function (search, page=1, page_size=24) {
         </div>`
             });
             $('#custom-cards .row').html(cards)
-            $(".loader-wrapper").fadeOut("slow" | 4000)
+            // $(".loader-wrapper").fadeOut("slow" | 4000)
         }
     );
 }

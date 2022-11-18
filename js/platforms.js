@@ -8,7 +8,7 @@ var createButton  = (page, distance) => {
     btn = searchParams.toString();
     button = `
         <li class="page-item">
-            <a class="page-link" href="platforms.html?${btn}">${parseInt(page)+distance}</a>
+            <a class="page-link page-${parseInt(page)+distance}" href="platforms.html?${btn}">${parseInt(page)+distance}</a>
         </li>
     `
     return button
@@ -47,13 +47,16 @@ var initPlatformsList = function (page=1, page_size=24) {
             if(pages > page){
                 paginator += `<li class="page-item"><a class="page-link" href="platforms.html?${btnNext}">Próxima</a></li>`;
             }
+            $("#games-items").removeAttr("style")
             $('.pagination').html(paginator)
+            let currentPage = $("#page").val()
+            $(".page-"+currentPage).addClass("active");
             response.results.forEach(result => {
                 cards += `
-        <div class="col preview-platform" data-target="${result.id}" style="cursor: pointer">
+        <div class="col preview-platform" data-target="${result.id}" style="cursor: pointer; height: 290px;">
           <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('${result.image_background}'); background-size: cover">
             <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1 text-center">
-              <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">${result.name}</h3>
+              <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold" style="text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;">${result.name}</h3>
                 </li>
               </ul>
             </div>
@@ -69,9 +72,9 @@ $(document).ready(function () {
     // const page_size = 20;
     const modalToggle = document.getElementById('platformModal'); 
     const myModal = new bootstrap.Modal(document.getElementById('platformModal'))
-
     const queryString = window.location.search;
     const params = new URLSearchParams(queryString)
+    const search = params.get('search'); 
     const page = params.get('page'); 
     initPlatformsList(page);
     $( "body" ).delegate( ".preview-platform", "click", function() {
