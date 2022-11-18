@@ -18,7 +18,7 @@ body {
   height: 32rem;
 }
 
-.sombra-titulo{
+.sombra-titulo {
   text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
 }
 
@@ -41,8 +41,117 @@ body {
   letter-spacing: -.05rem;
 }
 
+@media (min-width: 320px) and (max-width: 620px) {
 
+  .carousel {
+    margin-bottom: 1rem;
+  }
 
+  .carousel-inner {
+    height: 35%;
+  }
+
+  .carousel-item {
+    height: 100%;
+  }
+
+  #banner_principal {
+    min-height: 10px;
+    background-color: #c6c6c6;
+  }
+
+  .carousel-caption {
+    bottom: 15px;
+    z-index: 10;
+  }
+
+  .carousel-caption p {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 620px) and (max-width: 768px) {
+  .carousel {
+    margin-bottom: 1rem;
+  }
+
+  .carousel-inner {
+    height: 45%;
+  }
+
+  .carousel-item {
+    height: 100%;
+  }
+
+  #banner_principal {
+    min-height: 10px;
+    background-color: #c6c6c6;
+  }
+
+  .carousel-caption {
+    bottom: 15px;
+    z-index: 10;
+  }
+
+  .carousel-caption p {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .carousel {
+    margin-bottom: 1rem;
+  }
+
+  .carousel-inner {
+    height: 55%;
+  }
+
+  .carousel-item {
+    height: 100%;
+  }
+
+  #banner_principal {
+    min-height: 10px;
+    background-color: #c6c6c6;
+  }
+
+  .carousel-caption {
+    bottom: 15px;
+    z-index: 10;
+  }
+
+  .carousel-caption p {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1400px) {
+  .carousel {
+    margin-bottom: 1rem;
+  }
+
+  .carousel-inner {
+    height: 65%;
+  }
+
+  .carousel-item {
+    height: 100%;
+  }
+
+  #banner_principal {
+    min-height: 10px;
+    background-color: #c6c6c6;
+  }
+
+  .carousel-caption {
+    bottom: 15px;
+    z-index: 10;
+  }
+
+  .carousel-caption p {
+    font-size: 1rem;
+  }
+}
 @media (min-width: 40em) {
   .carousel-caption p {
     margin-bottom: 1.25rem;
@@ -64,7 +173,6 @@ body {
 
 
 #banner_principal {
-  min-height: 500px;
   background-color: #c6c6c6;
 }
 

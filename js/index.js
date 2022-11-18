@@ -1,5 +1,5 @@
 var initCarousel = function (page_size, idCarousel) {
-    if($("#"+idCarousel).length){
+    if ($("#" + idCarousel).length) {
         var sliders = '';
         var sliders_indicators = '';
         $.get(
@@ -11,9 +11,8 @@ var initCarousel = function (page_size, idCarousel) {
                     console.log(result)
                     if (i != 0) active = '';
                     sliders += `
-            <div class="carousel-item ${active}">
-                <img class="bd-placeholder-img" width="100%" height="100%" src="${result.background_image}" style="background-size: cover"/>
-
+            <div class="carousel-item ${active}">   
+            <img class="bd-placeholder-img" width="100%" height="100%" src="${result.background_image}" style="background-size: contain"/>
                 <div class="container">
                 <div class="carousel-caption">
                     <h1 class="sombra-titulo">${result.name}</h1>
