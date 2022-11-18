@@ -8,9 +8,10 @@ var createButton  = (page, distance) => {
     btn = searchParams.toString();
     button = `
         <li class="page-item">
-            <a class="page-link" href="games.html?${btn}">${parseInt(page)+distance}</a>
+            <a class="page-link page-${parseInt(page)+distance}" href="games.html?${btn}">${parseInt(page)+distance}</a>
         </li>
     `
+    
     return button
 }
 var initGamesList = function (search, page=1, page_size=24) {
@@ -26,6 +27,7 @@ var initGamesList = function (search, page=1, page_size=24) {
     }
     
     var cards = '';
+    $(".loader-wrapper")
     $.get(
         url,
         function (response) {
@@ -52,6 +54,8 @@ var initGamesList = function (search, page=1, page_size=24) {
                 paginator += `<li class="page-item"><a class="page-link" href="games.html?${btnNext}">Próxima</a></li>`;
             }
             $('.pagination').html(paginator)
+            let currentPage = $("#page").val()
+            $(".page-"+currentPage).addClass("active");
             response.results.forEach(result => {
                 cards += `
         <div class="col preview-game" data-target="${result.id}" style="cursor: pointer;height: 290px;">
@@ -65,6 +69,7 @@ var initGamesList = function (search, page=1, page_size=24) {
         </div>`
             });
             $('#custom-cards .row').html(cards)
+            $(".loader-wrapper").fadeOut("slow" | 4000)
         }
     );
 }
@@ -73,11 +78,11 @@ $(document).ready(function () {
     // const page_size = 20;
     const modalToggle = document.getElementById('gameModal'); 
     const myModal = new bootstrap.Modal(document.getElementById('gameModal'))
-
     const queryString = window.location.search;
     const params = new URLSearchParams(queryString)
     const search = params.get('search'); 
-    const page = params.get('page'); 
+    const page = params.get('page');
+    $("#page").val(page)
     $("#search").val(search)
     initGamesList(search, page);
     $( "body" ).delegate( ".preview-game", "click", function() {
@@ -91,7 +96,6 @@ $(document).ready(function () {
                 $('.modal-body').html(response.description)
                 $("#modalTitle").html(response.name)
                 $("#site").attr("href", response.website)
-
             }
         );
         myModal.show(modalToggle)

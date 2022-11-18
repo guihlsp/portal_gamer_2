@@ -17,8 +17,8 @@ var initCarousel = function (page_size, idCarousel) {
                 <div class="container">
                 <div class="carousel-caption">
                     <h1 class="sombra-titulo">${result.name}</h1>
-                    <p>Descrição do jogo</p>
-                    <p>Avaliação: ${result.rating}/${result.rating_top}</p>
+                    <p class="sombra-titulo">Descrição do jogo</p>
+                    <p class="sombra-titulo">Avaliação: ${result.rating}/${result.rating_top}</p>
                     <p><a class="btn btn-lg btn-primary">Saiba mais</a></p>
                 </div>
                 </div>

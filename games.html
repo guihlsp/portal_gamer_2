@@ -16,16 +16,18 @@
   <!-- <script src="js/banner.js"></script> -->
   <script src="js/search.js"></script>
   <script src="js/games.js"></script>
+  <script src="https://use.fontawesome.com/e82ecfdc8f.js"></script>
 
 </head>
 
 <body>
+
   <div class="loader-wrapper">
     <span class="loader"><span class="loader-inner"></span></span>
   </div>
   <script>
     $(window).on("load", function () {
-      $(".loader-wrapper").fadeOut("slow" | 4000)
+      // $(".loader-wrapper").fadeOut("slow" | 4000)
     });
   </script>
   <header>
@@ -52,8 +54,9 @@
               <a class="nav-link" href="#lojas">Lojas</a>
             </li>
           </ul>
-          <form class="d-flex role" type="get" action="games.html">
-            <input class="form-control me-2" name="search" type="search" id="search" placeholder="Insira o nome do jogo" aria-label="Search">
+          <form class="d-flex role mb-2 mb-md-0" type="get" action="games.html">
+            <input class="form-control me-2" name="search" type="search" id="search" placeholder="Insira o nome do jogo"
+              aria-label="Search">
             <button class="btn btn-outline-info" type="submit" id="btn_search">Buscar</button>
           </form>
         </div>
@@ -63,8 +66,9 @@
   <main>
 
     <div class="px-4 py-5" id="custom-cards">
-      <h1 class="pb-2 border-bottom text-center">Games</h1>  
+      <h1 class="pb-2 border-bottom text-center">Games</h1>
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 align-items-stretch g-4 py-5">
+        Carregando...
       </div>
       <nav aria-label="pagination">
         <ul class="pagination">
@@ -72,13 +76,12 @@
       </nav>
     </div>
 
-    <!-- Modal -->
     <div class="modal fade" id="gameModal" tabindex="-1" aria-labelledby="gameModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
             <h1 class="modal-title fs-5" id="modalTitle"></h1>
-            
+
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
@@ -91,16 +94,77 @@
       </div>
     </div>
     <hr class="featurette-divider">
-    <!-- FOOTER -->
-    <footer class="container">
-      <p class="float-end"><a href="#">Back to top</a></p>
-      <p>© 2017–2022 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+
+    <footer class="container text-center">
+      <div class="card text-bg-dark mb-3" style="max-width: 100%;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="imgs/me.png" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Guilherme Henrique Luiz Soares Pereira</h5>
+              <p class="card-text">Análise e Desenvolvimento de Sistemas<br /> Puc Minas - São Gabriel</p>
+              <hr class="divider">
+              <p class="social-medias">
+                <a id="linkedin" type="button" class="btn btn-primary btn-lg social-media"
+                  href="https://www.linkedin.com/in/guilhermehp/" target="_blank"><i
+                    class="fa fa-linkedin social-content"></i></a>
+                <a id="github" type="button" class="btn btn-secondary btn-lg social-media"
+                  href="https://github.com/guihlsp" target="_blank"><i class="fa fa-github social-content"></i></a>
+                <a id="instagram" type="button" class="btn btn-danger btn-lg social-media"
+                  href="https://www.instagram.com/guihlsp/" target="_blank"><i
+                    class="fa fa-instagram social-content"></i></a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
+    <button type="button" class="btn btn-primary btn-lg" id="btn-back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </button>
+    <style>
+      #btn-back-to-top {
+        position: fixed;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+        display: none;
+        border-radius: 50%;
+      }
+    </style>
+    <script>
+      let mybutton = document.getElementById("btn-back-to-top");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+      // When the user clicks on the button, scroll to the top of the document
+      mybutton.addEventListener("click", backToTop);
+
+      function backToTop() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
   </main>
 </body>
 
 <style>
-  .pagination{
+  .pagination {
     justify-content: center;
     align-items: center;
   }
