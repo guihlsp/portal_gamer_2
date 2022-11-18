@@ -28,6 +28,7 @@ var initCarousel = function (page_size, idCarousel) {
                 });
                 $('#' + idCarousel + ' .carousel-inner').html(sliders)
                 $('#' + idCarousel + ' .carousel-indicators').html(sliders_indicators)
+                $('#carousel-load').removeAttr("style");
             }
         );
     }
