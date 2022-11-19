@@ -48,7 +48,7 @@ var initPublishers = function (page_size, idPublisher) {
             <div class="col-lg-4 md-6 sm-12 ${item}">
                 <div class="card card-cover overflow-hidden text-bg-dark shadow-lg">
                     <h2 class=>${result.name}</h2>
-                    <img class="" src="${result.image_background}" style="background-size: cover; height: auto;">
+                    <img class="" src="${result.image_background}" style="background-size: cover; width: auto;">
                     </img>
                     <h4 class="fw-normal text-decoration-underline mt-2 mb-2">Principais jogos</h4>
                     <p>${result.games[0].name}</p>
