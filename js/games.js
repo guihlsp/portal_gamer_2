@@ -68,6 +68,7 @@ var initGamesList = function (search, page=1, page_size=24) {
           </div>
         </div>`
             });
+            
             $('#custom-cards .row').html(cards)
             // $(".loader-wrapper").fadeOut("slow" | 4000)
         }
@@ -93,6 +94,7 @@ $(document).ready(function () {
             url,
             function (response) {
                 console.log(response)
+                $('#modalBody').removeAttr("style");
                 $('.modal-body').html(response.description)
                 $("#modalTitle").html(response.name)
                 $("#site").attr("href", response.website)

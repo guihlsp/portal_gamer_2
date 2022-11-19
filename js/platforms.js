@@ -85,6 +85,7 @@ $(document).ready(function () {
             url,
             function (response) {
                 console.log(response)
+                $('#modalBody').removeAttr("style");
                 $("#modalTitle").html(response.name)
 
             }
