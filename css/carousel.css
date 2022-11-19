@@ -11,7 +11,7 @@ body {
 
 .carousel-caption {
   bottom: 3rem;
-  z-index: 10;
+  z-index:1;
 }
 
 .carousel-item {
@@ -62,7 +62,7 @@ body {
 
   .carousel-caption {
     bottom: 15px;
-    z-index: 10;
+    z-index:1;
   }
 
   .carousel-caption p {
@@ -90,7 +90,7 @@ body {
 
   .carousel-caption {
     bottom: 15px;
-    z-index: 10;
+    z-index:1;
   }
 
   .carousel-caption p {
@@ -104,7 +104,7 @@ body {
   }
 
   .carousel-inner {
-    height: 55%;
+    height: 500px;
   }
 
   .carousel-item {
@@ -118,7 +118,34 @@ body {
 
   .carousel-caption {
     bottom: 15px;
-    z-index: 10;
+    z-index:1;
+  }
+
+  .carousel-caption p {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 992px) and (max-width: 1400px) {
+  .carousel {
+    margin-bottom: 1rem;
+  }
+
+  .carousel-inner {
+    height: 500px;
+  }
+
+  .carousel-item {
+    height: 100%;
+  }
+
+  #banner_principal {
+    min-height: 10px;
+    background-color: #c6c6c6;
+  }
+
+  .carousel-caption {
+    bottom: 15px;
+    z-index:1;
   }
 
   .carousel-caption p {
@@ -145,7 +172,7 @@ body {
 
   .carousel-caption {
     bottom: 15px;
-    z-index: 10;
+    z-index:1;
   }
 
   .carousel-caption p {
