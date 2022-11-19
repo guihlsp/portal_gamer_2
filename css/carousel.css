@@ -41,7 +41,7 @@ body {
   letter-spacing: -.05rem;
 }
 
-@media (min-width: 320px) and (max-width: 620px) {
+/* @media (min-width: 320px) and (max-width: 620px) {
 
   .carousel {
     margin-bottom: 1rem;
@@ -178,7 +178,7 @@ body {
   .carousel-caption p {
     font-size: 1rem;
   }
-}
+} */
 @media (min-width: 40em) {
   .carousel-caption p {
     margin-bottom: 1.25rem;
