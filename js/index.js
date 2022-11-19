@@ -45,7 +45,7 @@ var initPublishers = function (page_size, idPublisher) {
                 response.results.forEach(result => {
                     console.log(result)
                     pubs += `
-            <div class="col-lg-4 md-6 sm-12 ${item}">
+            <div class="col-lg-4 md-6 sm-12${item}">
                 <div class="card card-cover overflow-hidden text-bg-dark shadow-lg">
                     <h2 class=>${result.name}</h2>
                     <img class="" src="${result.image_background}" style="background-size: cover; width: auto;">
