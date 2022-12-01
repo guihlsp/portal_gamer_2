@@ -97,7 +97,10 @@ $(document).ready(function () {
                 $('#modalBody').removeAttr("style");
                 $('.modal-body').html(response.description)
                 $("#modalTitle").html(response.name)
+                $(this).data("target", response.id)
                 $("#site").attr("href", response.website)
+                $("#visualizar").attr("href", 'detalhes.html?id='+response.id)
+
             }
         );
         myModal.show(modalToggle)

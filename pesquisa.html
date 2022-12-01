@@ -46,7 +46,7 @@
               <a class="nav-link " aria-current="page" href='index.html#destaques'>Destaques</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="pesquisa.html">Games</a>
+              <a class="nav-link active" href="pesquisa.html">Jogos</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="platforms.html">Plataformas</a>
@@ -61,10 +61,10 @@
       </div>
     </nav>
   </header>
-  <main class="container">
+  <main>
 
     <div class="px-4 py-5" id="custom-cards">
-      <h1 class="pb-2 border-bottom text-center">Games</h1>
+      <h1 class="pb-2 border-bottom text-center">Jogos</h1>
       <div id="games-items" style="display:flex;justify-content: center;" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 align-items-stretch g-4 py-5">
         <div class="spinner-border" style="width:300px; height: 300px" role="status">
           <span class="visually-hidden">Loading...</span>
@@ -90,10 +90,13 @@
               <span class="visually-hidden">Loading...</span>
             </div>
           </div>
-          <div class="modal-footer">
-            <a id="visualizar" type="button" class="btn btn-primary left-0" href="">Visualizar</a>
-            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
-            <a id="site" type="button" class="btn btn-primary" href="" target="_blank">Acessar site</a>
+          <div class="modal-footer" style="display: flex; justify-content:space-between">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i class="fa fa-times" aria-hidden="true" style="font-size: 20px"></i>
+                Fechar</button>
+            <a id="visualizar" type="button" class="btn btn-primary" href="" data-target=""><i class="fa fa-search" aria-hidden="true" style="font-size: 20px"></i>
+                Visualizar detalhes</a>
+            <a id="site" type="button" class="btn btn-dark" href="" target="_blank"><i class="fa fa-external-link" aria-hidden="true" style="font-size: 20px"></i>
+                Acessar site</a>
           </div>
         </div>
       </div>
