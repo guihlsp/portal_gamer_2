@@ -8,7 +8,7 @@ var createButton  = (page, distance) => {
     btn = searchParams.toString();
     button = `
         <li class="page-item">
-            <a class="page-link page-${parseInt(page)+distance}" href="games.html?${btn}">${parseInt(page)+distance}</a>
+            <a class="page-link page-${parseInt(page)+distance}" href="pesquisa.html?${btn}">${parseInt(page)+distance}</a>
         </li>
     `
     return button
@@ -41,7 +41,7 @@ var initGamesList = function (search, page=1, page_size=24) {
             pages = Math.ceil(response.count/page_size);
             let paginator = ''
             if(page > 1){
-                paginator = `<li class="page-item"><a class="page-link" href="games.html?${btnPrev}">Anterior</a></li>`;
+                paginator = `<li class="page-item"><a class="page-link" href="pesquisa.html?${btnPrev}">Anterior</a></li>`;
             }
 
             for (let index = -3; index < 3; index++) {
@@ -50,7 +50,7 @@ var initGamesList = function (search, page=1, page_size=24) {
                 }
             }
             if(pages > page){
-                paginator += `<li class="page-item"><a class="page-link" href="games.html?${btnNext}">Próxima</a></li>`;
+                paginator += `<li class="page-item"><a class="page-link" href="pesquisa.html?${btnNext}">Próxima</a></li>`;
             }
             $("#games-items").removeAttr("style")
             $('.pagination').html(paginator)

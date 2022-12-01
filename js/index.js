@@ -8,7 +8,7 @@ var initCarousel = function (page_size, idCarousel) {
                 let i = 0;
                 let active = 'active';
                 response.results.forEach(result => {
-                    console.log(result)
+                    // console.log(result)
                     if (i != 0) active = '';
                     sliders += `
             <div class="carousel-item ${active}">   
@@ -32,9 +32,8 @@ var initCarousel = function (page_size, idCarousel) {
         );
     }
 }
-{/* <p><a class="btn btn-lg btn-primary">Saiba mais</a></p> */}
 
-var initPublishers = function (page_size, idPublisher) {   
+var initPublishers = function (page_size, idPublisher) {
     if ($("#" + idPublisher).length) {
         var pubs = '';
         $.get(
@@ -43,7 +42,7 @@ var initPublishers = function (page_size, idPublisher) {
                 let i = 0;
                 let item = 'item';
                 response.results.forEach(result => {
-                    console.log(result)
+                    // console.log(result)
                     pubs += `
             <div class="col-lg-4 md-6 sm-12${item}">
                 <div class="card card-cover overflow-hidden text-bg-dark shadow-lg">
@@ -56,8 +55,8 @@ var initPublishers = function (page_size, idPublisher) {
                     <p>${result.games[2].name}</p>
                     
                 </div>
-            </div>` 
-            // <p><a class="btn btn-light" href="#">Saiba mais</a></p>
+            </div>`
+                    // <p><a class="btn btn-light" href="#">Saiba mais</a></p>
                     i++
                 });
                 $('#' + idPublisher + ' .mainPublisher').html(pubs)
@@ -67,9 +66,9 @@ var initPublishers = function (page_size, idPublisher) {
 }
 
 
-
 $(document).ready(function () {
     const page_size = 3;
     initCarousel(page_size, 'banner_principal');
     initPublishers(page_size, 'Publisher');
+    initRecomendacoes();
 })

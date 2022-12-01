@@ -1,8 +1,3 @@
-//montar a listagem
-
-//montar o paginator
-
-
 $(document).ready(function(){
     $('#btn_search').on('click', function(){
         const queryString = window.location.search;

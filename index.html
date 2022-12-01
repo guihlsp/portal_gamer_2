@@ -45,16 +45,14 @@
                 alias=":destaques">Destaques</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="games.html?page=1" alias=":jogos">Jogos</a>
+              <a class="nav-link" href="pesquisa.html?page=1" alias=":jogos">Jogos</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="platforms.html?page=1" alias=":plataformas">Plataformas</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#lojas">Lojas</a>
-            </li>
+
           </ul>
-          <form class="d-flex role mb-2 mb-md-0" type="get" action="games.html">
+          <form class="d-flex role mb-2 mb-md-0" type="get" action="pesquisa.html">
             <input class="form-control me-2" name="search" type="search" id="search" placeholder="Insira o nome do jogo"
               aria-label="Search">
             <button class="btn btn-outline-primary" type="submit" id="btn_search">Buscar</button>
@@ -63,35 +61,37 @@
       </div>
     </nav>
   </header>
-  <main>
 
+  <main>
     <div class="container mt-5">
       <h1 class="text-center mb-3 text">Principais jogos</h1>
-      <div id="banner_principal" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-        </div>
-        <div id="carousel-load" class="carousel-inner" style="display:flex;justify-content: center;" id="destaques">
-          <div class="spinner-border" style="width:200px; height: 200px; margin-top: 10%" role="status">
-            <span class="visually-hidden">Loading...</span>
+      <div class="card bg-dark">
+        <div id="banner_principal" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
           </div>
-          <!-- <img src="imgs/loading.gif" style="width: 300px;" /> -->
+          <div id="carousel-load" class="carousel-inner" style="display:flex;justify-content: center;" id="destaques">
+            <div class="spinner-border" style="width:200px; height: 200px; margin-top: 10%" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+            <!-- <img src="imgs/loading.gif" style="width: 300px;" /> -->
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#banner_principal" data-bs-slide="prev">
+            <span
+              style="background-color: black; border-radius: 50%; width: 50px;height: 50px; justify-content: center; display: flex; align-items: center;"
+              aria-hidden="true">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#banner_principal" data-bs-slide="next">
+            <span
+              style="background-color: black; border-radius: 50%; width: 50px;height: 50px; justify-content: center; display: flex; align-items: center;"
+              aria-hidden="true">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#banner_principal" data-bs-slide="prev">
-          <span
-            style="background-color: black; border-radius: 50%; width: 50px;height: 50px; justify-content: center; display: flex; align-items: center;"
-            aria-hidden="true">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          </span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#banner_principal" data-bs-slide="next">
-          <span
-            style="background-color: black; border-radius: 50%; width: 50px;height: 50px; justify-content: center; display: flex; align-items: center;"
-            aria-hidden="true">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          </span>
-          <span class="visually-hidden">Next</span>
-        </button>
       </div>
     </div>
 
@@ -106,68 +106,6 @@
         </div>
 
         <hr class="featurette-divider">
-
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading fw-normal lh-1">Nome da loja <span class="text-muted">It’ll blow
-                your mind.</span></h2>
-            <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose
-              here.</p>
-          </div>
-          <div class="col-md-5">
-            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-              height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
-              preserveAspectRatio="xMidYMid slice" focusable="false">
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa"
-                dy=".3em">500x500</text>
-            </svg>
-          </div>
-        </div>
-
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-          <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading fw-normal lh-1">Nome da loja <span class="text-muted">See for
-                yourself.</span></h2>
-            <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this
-              layout would work with some actual real-world content in place.</p>
-          </div>
-          <div class="col-md-5 order-md-1">
-            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-              height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
-              preserveAspectRatio="xMidYMid slice" focusable="false">
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa"
-                dy=".3em">500x500</text>
-            </svg>
-          </div>
-        </div>
-
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading fw-normal lh-1">Nome da loja <span class="text-muted">Checkmate.</span>
-            </h2>
-            <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really
-              intended to be actually read, simply here to give you a better view of what this would look like with some
-              actual content. Your content.</p>
-          </div>
-          <div class="col-md-5">
-            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-              height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
-              preserveAspectRatio="xMidYMid slice" focusable="false">
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa"
-                dy=".3em">500x500</text>
-            </svg>
-          </div>
-        </div>
-
-        <hr class="featurette-divider">
-
       </div>
 
       <footer class="container text-center">
@@ -186,7 +124,7 @@
                   <a id="linkedin" type="button" class="btn btn-primary btn-lg social-media"
                     href="https://www.linkedin.com/in/guilhermehp/" target="_blank"><i
                       class="fa fa-linkedin social-content"></i></a>
-                  <a id="github" type="button" class="btn btn-secondary btn-lg social-media"
+                  <a id="github" type="button" class="btn btn-dark btn-lg social-media"
                     href="https://github.com/guihlsp" target="_blank"><i class="fa fa-github social-content"></i></a>
                   <a id="instagram" type="button" class="btn btn-danger btn-lg social-media"
                     href="https://www.instagram.com/guihlsp/" target="_blank"><i
@@ -202,7 +140,6 @@
       </button>
 
       <style>
-
         #btn-back-to-top {
           position: fixed;
           height: 50px;
