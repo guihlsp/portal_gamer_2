@@ -1,19 +1,19 @@
-var detalhesJogo = function(detalhes){
+var detalhesJogo = function (detalhes) {
     var detail = ''
     var key = '?key=9bcd3f7f965d491ead40005e7c50b378';
     var url = '';
 
     jogo = ''
-    if(detalhes){
-        jogo = '/'+detalhes;
+    if (detalhes) {
+        jogo = '/' + detalhes;
     }
-    url = 'https://api.rawg.io/api/games'+ jogo + key;
-    
+    url = 'https://api.rawg.io/api/games' + jogo + key;
+
 
     $.get(
         url,
         function (response) {
-                detail += `
+            detail += `
                 <div id="firstCard" class="card bg-dark text-light">
                     <div class="card-title row mb-3">
                         <h1 class="text-center align-center mt-4">
@@ -49,11 +49,13 @@ var detalhesJogo = function(detalhes){
                         </div>
                     </div>
                 </div>
+
                 <div id="secondCard" class="card bg-dark text-light mt-5">
                     <div class="card-title row">
                         <h2 class="text-center align-center mt-4">
                             Informações adicionais
                         </h2>
+                    </div>
                     <div class="card-body">
                         <div class="row col-12 mb-3 text-center">
                             <div class="col-4 text-center">
@@ -73,9 +75,29 @@ var detalhesJogo = function(detalhes){
                     <div class="card-footer d-flex">
                         <a id="site" type="button" class="btn btn-primary col-6 mx-auto" href="${response.website}" target="_blank"><i class="fa fa-external-link" aria-hidden="true" ></i>  Acessar site do jogo</a>
                     </div>
+                </div>
+
+                <div id="thirdCard" class="card bg-dark text-light mt-5">
+                    <div class="card-title row">
+                        <h2 class="text-center align-center mt-4">
+                            Onde comprar?
+                        </h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="row col-12 mb-3 text-center">
+                            <div class="col-6 text-center">
+                                <p><a href="https://${response.stores[0].store.domain}" target="_blank" class="btn btn-light"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                ${response.stores[0].store.name}</a></p>
+                            </div>
+                            <div class="col-6">
+                                <p><a href="https://${response.stores[1].store.domain}" target="_blank" class="btn btn-light"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                ${response.stores[1].store.name}</a></p>
+                            </div>
+                        </div>
+                    </div>
                 </div>`
 
-           
+
             $('#detalhes').html(detail);
             $('#detalhes').removeAttr("style");
         }
